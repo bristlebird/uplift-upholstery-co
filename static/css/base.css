@@ -9,8 +9,8 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #444;
-    font-family: "Nunito Sans", serif;
-    /* font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif; */
+    /* font-family: "Nunito Sans", serif; */
+    font-family: "Alegreya", Georgia, 'Times New Roman', Times, serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -20,7 +20,7 @@ body {
 }
 
 /* TYPOGRAPHY */
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .logo-font, .nav-font {
     font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5 {
     width: 1.5rem;
 }
 
-.logo-font {
+.logo-font, .nav-font {
     text-transform: uppercase;
     font-weight: 200;
 }
