@@ -10,6 +10,7 @@ body {
     height: calc(100vh - 164px);
     color: #444;
     font-family: "Nunito Sans", serif;
+    /* font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif; */
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -20,7 +21,7 @@ body {
 
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5 {
-    font-family: "Rokkitt", serif;
+    font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -74,6 +75,10 @@ h1, h2, h3, h4, h5 {
 
 .border-dark {
     border: 1px solid var(--dark) !important;
+}
+
+.bg-dark {
+    background: var(--dark) !important;
 }
 
 /* -------------------------------- Media Queries */
