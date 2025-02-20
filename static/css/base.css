@@ -1,0 +1,101 @@
+html {
+    height: 100%;
+}
+
+body {
+    --timber-green: #112A26;
+    --dark: var(--timber-green);
+    background: url('/media/phillip-goldsberry-fZuleEfeA1Q-unsplash.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #444;
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5 {
+    font-family: "Rokkitt", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* BUTTON MODIFIERS */
+.shop-now-button {
+    background: var(--dark);
+    color: white;
+    min-width: 260px;
+}
+
+.btn-dark {
+    background: var(--dark);
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:focus {
+    background: var(--dark);
+    color: white;
+}
+
+
+.text-dark {
+    color: var(--dark) !important;
+}
+
+.border-dark {
+    border: 1px solid var(--dark) !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
