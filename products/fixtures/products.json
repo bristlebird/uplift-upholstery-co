@@ -1,0 +1,114 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "UUC-001",
+        "name": "The Ballycatteen Sofa",
+        "summary": "The Ballycatteen sofa by Uplift. Inspired by a late Georgian / Regency design.",
+        "description": "<p>Shown here in a dyed Irish linen, single feather and down seat cushion and exposed show wood in stained oak.</p><p>The sofa design from the Georgian Regency period.</p><p>Both the frame making and upholstery are carried out within a 20 kilometre radius of our base in Kinsdale Co. Cork. We use traditional methods and materials, which are carefully and sympathetically balanced with modern techniques and equipment. This allows us to keep the build of each sofa as true to the original as possible.</p><p>Features such as tenon joints and the smooth, hand shaped frame are characteristics we’ve been keen to carry forward from some of the most respected and well known sofa and chair makers of the 19th and 20th centuries.</p><h2>The Upholstery</h2><p>The Ballycatteen is upholstered in Kinsale using a careful blend of traditional methods and materials, as well as modern techniques and equipment where appropriate. We follow a build up process which is in-keeping with the original design, however all parameters can be adjusted to ensure maximum comfort and suitability to the customer.</p><p>Options:</p><ul><li>The seat cushion can be supplied as a single, or as two or three separate cushions.</li><li>Show wood available in either oak, mahogany or ash.</li><li>Finished in a fabric of your choice.</li></ul><p>Dimensions:</p><ul><li>Back Centre Height: 86.5cm.</li><li>Maximum External Width: 198cm.</li><li>Maximum Depth: 78cm.</li><li>Approximate Seat Height: 50cm.</li><li>Approximate Seat Depth: 58cm.</li><li>Seat Width: 172cm.</li></ul><p>Lead Time:</p><ul><li>Approximately 8-12 weeks from finalising fabric choice and options.</li></ul><p>Price:</p><ul><li>Includes VAT @ 23%</li><li>Worldwide shipping available - quotations on request.</li></ul>",
+        "price": 4950.00,
+        "category": 1,
+        "image_url": "",
+        "image": "ballycatteen-sofa-l.webp"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "UUC-002",
+        "name": "Coffee Table Footstool",
+        "summary": "Coffee Table Footstool / Ottoman by Uplift",
+        "description": "<p>Our footstool frames are made within a 20 kilometre radius of our home in Kinsale, Co. Cork using FSC rated timbers, while the upholstery is carried out in our own Kinsale workshop. Traditional methods and materials are carefully and sympathetically balanced with modern techniques and equipment where appropriate.</p><p>We try and make our furniture a little kinder to the planet. We use coconut husk (coir) instead of horsehair which provides an animal friendly alternative to the build up process, along with recycled wool for a soft, comfortable padding.</p><p>Options:</p><ul><li>Finished in a fabric of your choice.</li></ul><p>Dimensions of Photographed Example:</p><ul><li>Maximum Height: 42cm.</li><li>Maximum External Width: 120cm.</li><li>Maximum Depth: 90cm</li></ul><p>Lead Time:</p><ul><li>Approximately 4-6 weeks from finalising fabric choice and options.</li></ul><p>Price:</p><ul><li>Includes VAT @ 23%</li><li>Worldwide shipping available - quotations on request.</li></ul>",
+        "price": 1250.00,
+        "category": 3,
+        "image_url": "",
+        "image": "coffeetable-footstool-l.webp"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "UUC-003",
+        "name": "The DeCourcey Armchair",
+        "summary": "The DeCourcey armchair by Uplift. Victorian design made for 21st Century living.",
+        "description": "<p>Shown here upholstered in a heavy gauge linen with tapered oak front legs and brass castors.</p><p>Both the frame making and upholstery are carried out within a 20 kilometre radius of our base in Kinsale, Co. Cork. We use traditional methods and materials, which are carefully and sympathetically balanced with modern techniques and equipment. This allows us to keep the build of each chair as true to the original as possible.</p><p>Features such as tenon joints and the smooth, hand shaped frame are characteristics we've been keen to carry forward from some of the most respected and well known sofa and chair makers of the 19th and 20th centuries.</p><h2>The Frame</h2><p>Each frame is made to order by hand. We use sustainable beech as standard, the integral legs can be made from any timber desired - allowing the exposed wood to be matched against existing furniture or personal taste without the need of artificial staining or colouring.</p><p>Great time and focus was spent sourcing the correct frame maker for the DeCourcey, ensuring each chair will last a lifetime.</p><h2>The Upholstery</h2><p>The DeCourcey armchair is upholstered in Kinsale using a careful blend of traditional methods and materials, as well as modern techniques and equipment where appropriate. We follow a build up process which is in-keeping with the original design, however all parameters can be adjusted to ensure maximum comfort and suitability to the customer.</p><p>Options:</p><ul><li>Finished in a fabric of your choice.</li></ul><p>Dimensions:</p><ul><li>Back Centre Height: 86cm.</li><li>Maximum External Width: 74cm.</li><li>Maximum Depth: 100cm.</li><li>Approximate Seat Height: 50cm.</li><li>Approximate Seat Depth: 62cm.</li><li>Seat Width: 50cm.</li></ul><p>Lead Time:</p><ul><li>Approximately 8-12 weeks from finalising fabric choice and options.</li></ul><p>Price:</p><ul><li>Includes VAT @ 23%</li><li>Worldwide shipping available - quotations on request.</li></ul>",
+        "price": 1750.00,
+        "category": 2,
+        "image_url": "",
+        "image": "decourcey-armchair-l.webp"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "UUC-004",
+        "name": "The Desmond Sofa",
+        "summary": "The Desmond sofa by Uplift. Inspired by an Edwardian wingback design",
+        "description": "<p>Shown here with optional bolster cushions, and finished in an upholstery grade cotton.</p><p>Both the frame making and upholstery are carried out within a 20 kilometre radius of our base in Kinsale, Co. Cork. We use traditional methods and materials, which are carefully and sympathetically balanced with modern techniques and equipment. This allows us to keep the build of each sofa as true to the original as possible.</p><p>Features such as tenon joints and the smooth, hand shaped frame are characteristics we’ve been keen to carry forward from some of the most respected and well known sofa and chair makers of the 19th and 20th centuries.</p><h2>The Frame</h2><p>Each frame is made to order by hand. We use sustainable beech as standard, the integral legs can be made from any timber desired - allowing the exposed wood to be matched against existing furniture or personal taste without the need of artificial staining or colouring.</p><p>Great time and focus was spent sourcing the correct frame maker for The Desmond sofa, ensuring each sofa will last a lifetime.</p><p>We are extremely proud of our frames and feel it’s important to show you what lies beneath the outer layers.</p><h2>The Upholstery</h2><p>The Desmond sofa is upholstered in Kinsale using a careful blend of traditional methods and materials, as well as modern techniques and equipment where appropriate. We follow a build up process which is in-keeping with the original design, however all parameters can be adjusted to ensure maximum comfort and suitability to the customer.</p><p>A variation on the original Edwardian design is the subtle lift in the lumber springs to allow the insertion of a feather seat cushion. This minor change enhances both the look of the Desmond sofa as well as increasing the level of comfort.</p><p>The second alteration was the removal of the integral arm rests at the frame making stage, opting now for a smooth and elegant curve which continues down into the frame base.</p><p>Options:</p><ul><li>With or without bolster cushions.</li><li>Finished in a fabric of your choice.</li></ul><p>Dimensions:</p><ul><li>Back Centre Height: 108cm.</li><li>Maximum External Width: 141cm.</li><li>Maximum Depth: 67cm</li><li>Approximate Seat Height: 58cm.</li><li>Approximate Seat Depth: 50cm.</li><li>Seat Width: 117cm.</li></ul><p>Lead Time:</p><ul><li>Approximately 8-12 weeks from finalising fabric choice and options.</li></ul><p>Price:</p><ul><li>Includes VAT @ 23%</li><li>Worldwide shipping available - quotations on request.</li></ul>",
+        "price": 3950.00,
+        "category": 1,
+        "image_url": "",
+        "image": "desmond-sofa-l.webp"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "UUC-005",
+        "name": "Drum Footstool",
+        "summary": "The Drum Footstool by Uplift. A robust and versatile piece that's comfortable enough to perch on and firm enough to use as a side table.",
+        "description": "<p>Robust and versatile pieces that are comfortable enough to perch on and firm enough to use as a side table. The upholstery is carried out in Kinsale, Co. Cork. We use FSC rated timbers to hand make the frames, then cover them in fabric remnants left over from the upholstery process, making them arguably the greenest footstools on the market.</p><p>These can be covered in a fabric of your own choice. 2m of plain fabric required.</p><p>Options:</p><ul><li>Finished in a fabric of your choice.</li></ul><p>Dimensions:</p><ul><li>Overall height of seat - 50cm.</li><li>Overall diameter of footstool - 45cm.</li></ul><p>Lead Time:</p><ul><li>Approximately 2 weeks from finalising fabric choice and options.</li></ul><p>Price:</p><ul><li>Includes VAT @ 23%</li><li>Worldwide shipping available - quotations on request.</li></ul>",
+        "price": 395.00,
+        "category": 3,
+        "image_url": "",
+        "image": "drum-footstool-l.webp"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "UUC-006",
+        "name": "The Multose Armchair",
+        "summary": "The Multose by Uplift. Our Multose armchair with extended width for extra comfort.",
+        "description": "<p>Shown here upholstered in a heavy gauge off white ticking with turned oak front legs and brass castors.</p><p>Both the frame making and upholstery are carried out within a 20 kilometre radius of our base in Kinsale, Co. Cork. We use traditional methods and materials, which are carefully and sympathetically balanced with modern techniques and equipment. This allows us to keep the build of each chair as true to the original as possible.</p><p>Features such as tenon joints and the smooth, hand shaped frame are characteristics we’ve been keen to carry forward from some of the most respected and well known sofa and chair makers of the 19th and 20th centuries.</p><h2>The Frame</h2><p>Each frame is made to order by hand. We use sustainable beech as standard, the integral legs can be made from any timber desired - allowing the exposed wood to be matched against existing furniture or personal taste without the need of artificial staining or colouring.</p><p>Great time and focus was spent sourcing the correct frame maker for the Multose armchair, ensuring each chair will last a lifetime.</p><h2>The Upholstery</h2><p>The Multose armchair is upholstered in Kinsale using a careful blend of traditional methods and materials, as well as modern techniques and equipment where appropriate. We follow a build up process which is in-keeping with the original design, however all parameters can be adjusted to ensure maximum comfort and suitability to the customer.</p><p>Options:</p><ul><li>Finished in a fabric of your choice.</li></ul><p>Dimensions:</p><ul><li>Back Centre Height: 88cm.</li><li>Maximum External Width: 113cm.</li><li>Maximum Depth: 105cm.</li><li>Approximate Seat Height: 48cm.</li><li>Approximate Seat Depth: 62cm.</li><li>Seat Width: 80cm.</li></ul><p>Lead Time:</p><ul><li>Approximately 8-12 weeks from finalising fabric choice and options.</li></ul><p>Price:</p><ul><li>Includes VAT @ 23%</li><li>Worldwide shipping available - quotations on request.</li></ul>",
+        "price": 2250.00,
+        "category": 2,
+        "image_url": "",
+        "image": "multose-armchair-l.webp"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "UUC-007",
+        "name": "The Ringcurran Armchair",
+        "summary": "The Ringcurran Armchair by Uplift. Classic comfortable deep seated design.",
+        "description": "<p>Shown here upholstered in a heavy gauge cotton with turned oak front legs and brass castors.</p><p>Both the frame making and upholstery are carried out within a 20 kilometre radius of our base in Kinsale, Co. Cork. We use traditional methods and materials, which are carefully and sympathetically balanced with modern techniques and equipment. This allows us to keep the build of each chair as true to the original as possible.</p><p>Features such as tenon joints and the smooth, hand shaped frame are characteristics we’ve been keen to carry forward from some of the most respected and well known sofa and chair makers of the 19th and 20th centuries.</p><h2>The Frame</h2><p>Each frame is made to order by hand. We use sustainable beech as standard, the integral legs can be made from any timber desired - allowing the exposed wood to be matched against existing furniture or personal taste without the need of artificial staining or colouring.</p><p>Great time and focus was spent sourcing the correct frame maker for the Ringcurran armchair, ensuring each chair will last a lifetime.</p><h2>The Upholstery</h2><p>The Ringcurran armchair is upholstered in Kinsale using a careful blend of traditional methods and materials, as well as modern techniques and equipment where appropriate. We follow a build up process which is in-keeping with the original design, however all parameters can be adjusted to ensure maximum comfort and suitability to the customer.</p><p>Options:</p><ul><li>Finished in a fabric of your choice.</li></ul><p>Dimensions:</p><ul><li>Back Centre Height: 88cm.</li><li>Maximum External Width: 77cm.</li><li>Maximum Depth: 105cm.</li><li>Approximate Seat Height: 48cm.</li><li>Approximate Seat Depth: 62cm.</li><li>Seat Width: 43cm.</li></ul><p>Lead Time:</p><ul><li>Approximately 8-12 weeks from finalising fabric choice and options.</li></ul><p>Price:</p><ul><li>Includes VAT @ 23%</li><li>Worldwide shipping available - quotations on request.</li></ul>",
+        "price": 2250.00,
+        "category": 2,
+        "image_url": "",
+        "image": "ringcurran-armchair-l.webp"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "UUC-008",
+        "name": "The Ringrone Library Chair",
+        "summary": "The Ringrone library chair by Uplift.",
+        "description": "<p>Shown here with turned oak legs, brass castors, and finished in a heavy gauge off-white cotton.</p><p>Both the frame making and upholstery are carried out within a 20 kilometre radius of our base in Kinsale, Co. Cork. We use traditional methods and materials, which are carefully and sympathetically balanced with modern techniques and equipment. This allows us to keep the build of each chair as true to the original as possible.</p><p>Features such as tenon joints and the smooth, hand shaped frame are characteristics we’ve been keen to carry forward from some of the most respected and well known sofa and chair makers of the 19th and 20th centuries.</p><h2>The Frame</h2><p>Each frame is made to order by hand. We use sustainable beech as standard with oak legs.</p><p>Great time and focus was spent sourcing the correct frame maker for the Ringrone library chair, ensuring each chair will last a lifetime.</p><p>We are extremely proud of our frames and feel it’s important to explain to you what lies beneath the outer layers.</p><h2>The Upholstery</h2><p>The Ringrone library chair is upholstered in Kinsale using a careful blend of traditional methods and materials, as well as modern techniques and equipment where appropriate. We follow a build up process which is in-keeping with the original design, however all parameters can be adjusted to ensure maximum comfort and suitability to the customer.</p><p>Options:</p><ul><li>Finished in a fabric of your choice.</li></ul><p>Dimensions:</p><ul><li>Back Centre Height: 90cm.</li><li>Maximum External Width: 73cm.</li><li>Maximum Depth: 90cm</li><li>Approximate Seat Height: 49cm.</li><li>Approximate Seat Depth: 58cm.</li><li>Seat Width: 53cm.</li></ul><p>Lead Time:</p><ul><li>Approximately 8-12 weeks from finalising fabric choice and options.</li></ul><p>Price:</p><ul><li>Includes VAT @ 23%</li><li>Worldwide shipping available - quotations on request.</li></ul>",
+        "price": 2950.00,
+        "category": 2,
+        "image_url": "",
+        "image": "ringrone-armchair-l.webp"
+      }
+    }
+  ]
