@@ -5,9 +5,9 @@ html {
 body {
     --timber-green: #112A26;
     --dark: var(--timber-green);
-    background: url('/media/phillip-goldsberry-fZuleEfeA1Q-unsplash.webp') no-repeat center center fixed;
+    /* background: url('/media/phillip-goldsberry-fZuleEfeA1Q-unsplash.webp') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 164px); */
     color: #444;
     /* font-family: "Nunito Sans", serif; */
     font-family: "Bitter", Georgia, 'Times New Roman', Times, serif;
@@ -86,6 +86,16 @@ h1, h2, h3, h4, h5, .logo-font {
 .bg-dark {
     background: var(--dark) !important;
 }
+
+/* .overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+} */
 
 /* -------------------------------- Media Queries */
 
