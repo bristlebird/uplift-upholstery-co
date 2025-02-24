@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, .logo-font {
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -119,4 +119,15 @@ h1, h2, h3, h4, h5, .logo-font {
     .header-container {
         padding-top: 164px;
     }
-}
+} */
+
+/* pad the top a bit when navbar is collapsed on mobile */
+/* @media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+} */
