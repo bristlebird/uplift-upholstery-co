@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav nav-font w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="nav-link text-dark mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-dark mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
@@ -11,31 +11,18 @@
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
-            <a class="nav-link text-dark mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Clothing
+            <a class="nav-link dropdown-toggle text-dark mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Furniture
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Activewear &amp; Essentials</a>
-                <a href="" class="dropdown-item">Jeans</a>
-                <a href="" class="dropdown-item">Shirts</a>
-                <a href="" class="dropdown-item">All Clothing</a>
+                <a href="{% url 'products' %}?category=sofas" class="dropdown-item">Sofas</a>
+                <a href="{% url 'products' %}?category=armchairs" class="dropdown-item">Armchairs</a>
+                <a href="{% url 'products' %}?category=footstools" class="dropdown-item">Foot Stools</a>
+                <a href="{% url 'products' %}?category=sofas,armchairs,footstools" class="dropdown-item">All Furniture</a>
             </div>
         </li>
-
-        <li class="nav-item dropdown">
-            <a class="nav-link text-dark mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Homeware
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Bed &amp; Bath</a>
-                <a href="" class="dropdown-item">Kitchen &amp; Dining</a>
-                <a href="" class="dropdown-item">All Homeware</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link text-dark" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
@@ -45,6 +32,6 @@
                 <a href="" class="dropdown-item">Clearance</a>
                 <a href="" class="dropdown-item">All Specials</a>
             </div>
-        </li>
+        </li> -->
     </ul>
 </div>
