@@ -83,14 +83,12 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_cart' %}">
+                        <a class="{% if product_count %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
-                                    {% if grand_total %}
-                                        &euro;{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        &euro;0.00
+                                    {% if product_count %}
+                                        <span class="cart-count badge">{{ product_count }}</span>
                                     {% endif %}
                                 </p>
                             </div>
