@@ -64,6 +64,19 @@ h1, h2, h3, h4, h5, .logo-font {
     color: white;
 }
 
+.btn-outline-dark {
+    background: white;
+    color: var(--dark) !important; /* use important to override link colors for <a> elements */
+    border: 1px solid var(--dark);
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:active,
+.btn-outline-dark:focus {
+    background: var(--dark);
+    color: white !important;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
