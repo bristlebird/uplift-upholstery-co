@@ -97,6 +97,11 @@ h1, h2, h3, h4, h5, .logo-font {
 	z-index: -1;
 } */
 
+/* Category badge links on product listing page */
+a.category-badge > span.badge:hover {
+    background: var(--dark) !important;
+    color: #fff !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
