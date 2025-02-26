@@ -4,32 +4,41 @@ html {
 
 body {
     --timber-green: #112A26;
-    --dark: var(--timber-green);
+    --plantation: #264f48;
+    --casal: #2c6a60;
+    /* --dark: var(--timber-green); */
+    --dark: var(--plantation);
+    /* --off-white: #f5f7f6; */
+    --off-white: #f3f6f4;
     /* background: url('/media/phillip-goldsberry-fZuleEfeA1Q-unsplash.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px); */
     color: #444;
-    /* font-family: "Nunito Sans", serif; */
-    font-family: "Bitter", Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--off-white);
+    font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
+    /* font-family: "Bitter", Georgia, 'Times New Roman', Times, serif; */
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-variation-settings:
         "wdth" 100,
         "YTLC" 500;
     font-size: 1.125rem;
+    /* font-size: 1rem; */
 }
 
 /* TYPOGRAPHY */
-h1, h2, h3, h4, h5, .logo-font {
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, .logo-font {
     font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 100;
     font-style: normal;
-    text-transform: uppercase;
+    color: var(--dark);
 }
 
 .logo-font {
+    /* font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
+    font-optical-sizing: auto; */
     text-transform: uppercase;
     font-weight: 200;
 }
@@ -129,6 +138,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Icon modifioer for add to cart button */
+.add-to-cart-icon {
+    vertical-align: -0.05em !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
