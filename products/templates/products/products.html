@@ -51,7 +51,7 @@
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-100 border-0 bg-transparent">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -64,17 +64,10 @@
                                 <div class="card-body pb-0 text-center">
                                     <h2 class="mb-0 h4">{{ product.name }}</h2>
                                 </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-center">
+                                <div class="card-footer pt-0 border-0 text-center bg-transparent">
                                     <div class="row">
                                         <div class="col">
                                             <p class="mb-0">&euro;{{ product.price | floatformat:0 | intcomma }}</p>
-                                            {% if product.category %}
-                                            <!-- <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                                </a>
-                                            </p> -->
-                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
