@@ -19,8 +19,13 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                {% if from_profile %}
+                <h2 class="logo-font my-5">Order Details</h2>
+                <p>Your order information is below. A confirmation email was sent to <strong>{{ order.email }}</strong>.</p>
+                {% else %}
                 <h2 class="logo-font my-5">Thank you</h2>
                 <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                {% endif %}
                 <hr>
             </div>
         </div>
@@ -191,5 +196,17 @@
 
             </div>
         </div>
+        <div class="row">
+			<div class="col-12 col-lg-7 text-right">
+				{% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-dark rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back to Profile</span>
+                    </a>
+                {% endif %}
+			</div>
+		</div>
     </div>
 {% endblock %}
