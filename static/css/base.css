@@ -5,11 +5,16 @@ html {
 body {
     --timber-green: #112A26;
     --plantation: #264f48;
+    --deep-sea: #00866f;
     --casal: #2c6a60;
+    --lynch: #61768a;
+    --pale-sky: #6c757d; /* default bootsrap placeholder colour (text-secondary) */
     /* --dark: var(--timber-green); */
     --dark: var(--plantation);
     /* --off-white: #f5f7f6; */
     --off-white: #f3f6f4;
+    --text-light: var(--deep-sea);
+    --text-light: var(--pale-sky);
     /* background: url('/media/phillip-goldsberry-fZuleEfeA1Q-unsplash.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px); */
@@ -168,7 +173,7 @@ a.category-badge > span.badge:hover {
     height: 0; 
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid black;
+    border-bottom: 8px solid var(--dark);
     position: absolute;
     top: -8px;
     right: 20px;
@@ -217,7 +222,7 @@ a.category-badge > span.badge:hover {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: var(--dark); /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -230,7 +235,7 @@ a.category-badge > span.badge:hover {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+    color: var(--text-light);
 }
 
 .allauth-form-inner-content button,
