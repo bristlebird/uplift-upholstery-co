@@ -21,7 +21,7 @@ for (let button of deleteProductBtns) {
     button.addEventListener("click", (e) => {
       let productId = e.target.getAttribute("data-product_id");
       let productName = e.target.getAttribute("data-product_name");
-      deleteProductConfirm.href = `delete/${productId}`;
+      deleteProductConfirm.href = `/products/delete/${productId}`;
       deleteProductName.innerHTML = `${productName}`;
       deleteProductModal.show();
     });
