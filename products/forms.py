@@ -1,15 +1,23 @@
+"""
+Form for adding / updating products by store owner
+"""
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-
+    """
+    Product form with all fields for adding / updating products
+    - displays category friendly names in choices dropdown &
+    replaces standard file input with a custom clearable file input
+    """
     class Meta:
         model = Product
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
