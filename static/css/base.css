@@ -356,15 +356,15 @@ a.category-badge > span.badge:hover {
         font-size: .9rem;
     }
 
-    .btn.btn-outline-dark.rounded-0,
+    /* .btn.btn-outline-dark.rounded-0,
     .btn.btn-dark.rounded-0 {
         padding: .375rem .375rem;
-    }
+    } */
 
     .btn.btn-outline-dark.rounded-0.btn-lg,
     .btn.btn-dark.rounded-0.btn-lg {
-        padding: .375rem .375rem;
-        font-size: .75rem;
+        /* padding: .375rem .375rem; */
+        font-size: 1rem;
     }
 
     .increment-qty, .decrement-qty {

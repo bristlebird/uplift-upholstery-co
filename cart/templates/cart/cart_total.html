@@ -1,0 +1,9 @@
+{% load humanize %}
+<h3>Cart Total: &euro;{{ total| floatformat:0 | intcomma }}</h3>
+<p>Delivery: &euro;{{ delivery | floatformat:0 | intcomma }}</p>
+<h3 class="my-4">Grand Total: &euro;{{ grand_total | floatformat:0 | intcomma }}</h3>
+{% if free_delivery_delta > 0 %}
+    <p class="mb-1 text-danger">
+        You could get free delivery by spending just <strong>&euro;{{ free_delivery_delta }}</strong> more!
+    </p>
+{% endif %}
