@@ -10,11 +10,6 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         exclude = ('user',)
-        # fields = ('user', 'default_phone_number',
-        #           'default_street_address1', 'default_street_address2',
-        #           'default_town_or_city', 'default_postcode', 'default_county',
-        #           'default_country',)
-
 
     def __init__(self, *args, **kwargs):
         """
