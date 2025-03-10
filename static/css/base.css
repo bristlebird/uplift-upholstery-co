@@ -300,6 +300,10 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
+/* Checkout form */
+.update-form .form-group {
+    margin-bottom: .25rem;
+}
 
 /* -------------------------------- Media Queries */
 
