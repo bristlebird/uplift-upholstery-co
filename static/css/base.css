@@ -9,12 +9,23 @@ body {
     --casal: #2c6a60;
     --lynch: #61768a;
     --pale-sky: #6c757d; /* default bootsrap placeholder colour (text-secondary) */
+    --sea-mist: #cee0ce;
+    --gray-nurse: #e5ede5;
+    --chelsea-gem: #a56900;
+    /* --chelsea-gem: #96711b; */
+    --persian-blue: #2228C1;
+
+
     /* --dark: var(--timber-green); */
     --dark: var(--plantation);
     /* --off-white: #f5f7f6; */
     --off-white: #f3f6f4;
     --text-light: var(--deep-sea);
     --text-light: var(--pale-sky);
+    /* --bg-lightgreen: var(--sea-mist); */
+    --bg-lightgreen: var(--gray-nurse);
+    --link-color: var(--chelsea-gem);
+    /* --link-color: var(--persian-blue); */
     /* background: url('/media/phillip-goldsberry-fZuleEfeA1Q-unsplash.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px); */
@@ -41,6 +52,10 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, .logo-font {
     color: var(--dark);
 }
 
+a {
+    color: var(--link-color);
+}
+
 .logo-font {
     /* font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
     font-optical-sizing: auto; */
@@ -65,8 +80,14 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, .logo-font {
     height: 1.5rem;
     width: 1.5rem;
 }
-
+/* increase & override large font awesome icon size */
+.fa-xl {
+    font-size: 2em !important;
+}
 /* BUTTON MODIFIERS */
+.btn {
+    text-transform: uppercase;
+}
 .shop-now-button {
     background: var(--dark);
     color: white;
@@ -303,6 +324,11 @@ a.category-badge > span.badge:hover {
 /* Checkout form */
 .update-form .form-group {
     margin-bottom: .25rem;
+}
+
+/* Site footer */
+.site-footer {
+    background-color: var(--bg-lightgreen);
 }
 
 /* -------------------------------- Media Queries */
