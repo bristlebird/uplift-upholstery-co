@@ -1,0 +1,1 @@
+Uplift Upholstery Order #{{ order.order_number }} placed by {{ order.full_name }}
