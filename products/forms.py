@@ -3,6 +3,7 @@ Form for adding / updating products by store owner
 """
 from django import forms
 from .widgets import CustomClearableFileInput
+from django_summernote.widgets import SummernoteWidget
 from .models import Product, Category
 
 
@@ -15,6 +16,10 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
+        widgets = {
+            'description': SummernoteWidget(),
+            'summary': SummernoteWidget(),
+        }
 
     image = forms.ImageField(
         label='Image', required=False, widget=CustomClearableFileInput)
