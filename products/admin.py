@@ -21,19 +21,9 @@ class ProductAdmin(SummernoteModelAdmin):
         'image',
     )
     ordering = ('sku',)
-    search_fields = ['title', 'summary', 'description']
+    search_fields = ['title', 'description']
     list_filter = ('status',)
-    summernote_fields = ('summary', 'description',)
-
-# class ProductAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'sku',
-#         'name',
-#         'category',
-#         'price',
-#         'image',
-#     )
-#     ordering = ('sku',)
+    summernote_fields = ('description',)
 
 
 class CategoryAdmin(admin.ModelAdmin):
