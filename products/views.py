@@ -6,6 +6,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.core.exceptions import PermissionDenied
+
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -13,8 +15,12 @@ from .forms import ProductForm
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
+    # only display published products to customers, superuser sees all.
+    if request.user.is_superuser:
+        products = Product.objects.all()
+    else: 
+        products = Product.objects.filter(status=1)
 
-    products = Product.objects.all()
     query = None
     categories = None
     sort = None
@@ -68,6 +74,10 @@ def product_detail(request, product_id):
     """ View to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    # throw 403 if product in draft & superuser not logged in
+    # i.e. only superuser can preview product in draft
+    if (not product.status) & (not request.user.is_superuser):
+        raise PermissionDenied
 
     context = {
         'product': product,

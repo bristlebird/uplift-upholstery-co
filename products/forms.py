@@ -2,8 +2,8 @@
 Form for adding / updating products by store owner
 """
 from django import forms
-from .widgets import CustomClearableFileInput
 from django_summernote.widgets import SummernoteWidget
+from .widgets import CustomClearableFileInput
 from .models import Product, Category
 
 

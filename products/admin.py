@@ -2,17 +2,16 @@
 Configure the Django admin for the Product & Category models
 """
 from django.contrib import admin
-from .models import Product, Category
 from django_summernote.admin import SummernoteModelAdmin
+from .models import Product, Category
 
-# Register your models here.
 
 @admin.register(Product)
 class ProductAdmin(SummernoteModelAdmin):
     """
     Lists fields to display in admin, fields for search,
     filters, fields to prepopulate and rich-text editor.
-    """    
+    """
     list_display = (
         'sku',
         'name',
@@ -36,5 +35,4 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-# admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

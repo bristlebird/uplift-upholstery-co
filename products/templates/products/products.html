@@ -68,6 +68,7 @@
                                         <p class="mb-0">
                                             <a href="{% url 'edit_product' product.id %}" class="badge badge-pill badge-dark">Edit</a> | 
                                             <a href="#" class="badge badge-pill badge-danger btn-delete-product" data-product_id="{{ product.id }}" data-product_name="{{ product.name }}" title="Delete product">Delete</a>
+                                            {% if not product.status %} [ DRAFT ] {% endif %}
                                         </p>
                                         {% endif %}
                                     </div>
