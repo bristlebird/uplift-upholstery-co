@@ -38,8 +38,6 @@
   <body class="d-flex flex-column h-100">
     <header class="container-fluid">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <!-- <div class="col-12 col-lg-4 mt-3 mb-auto py-1 py-lg-0">
-            </div> -->
             <div class="col-4 offset-4 my-auto pt-2 pb-0 text-center">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <img src="{% static 'uuc-logo-mark.svg' %}" alt="Uplift Upholstery logo mark" class="logo" width="50" height="58">
@@ -48,7 +46,7 @@
             </div>
             <div class="col-12 col-lg-4 mt-3 mb-auto py-1 py-lg-0">
                 <ul class="d-flex justify-content-end list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item w-75">
+                    <li class="w-75 mr-3">
                         <form method="GET" action="{% url 'products' %}">
                             <div class="input-group">
                                 <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search">
@@ -63,7 +61,7 @@
                         </form>
                     </li>
                     {% if request.user.is_authenticated %}
-                    <li class="list-inline-item">
+                    <li>
                         <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div>
@@ -81,8 +79,8 @@
                         </div>
                     </li> 
                     {% else %}
-                    <li class="list-inline-item">
-                        <a class="text-dark nav-link" href="{% url 'account_login' %}">
+                    <li>
+                        <a class="text-lighter nav-link" href="{% url 'account_login' %}">
                             <div class="text-center">
                                 <div>
                                     <i class="fa-solid fa-user fa-xl"></i>
@@ -92,36 +90,11 @@
                         </a>
                     </li>
                     {% endif %}
-                        
-                    <!--
-                    <li class="list-inline-item dropdown">
-                        <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div>
-                                    <i class="fa-solid fa-circle-user fa-xl"></i>
-                                    <span class="sr-only">My Account</span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0 dropdown-menu-right shadow" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li> 
-                    -->
                     <li class="list-inline-item">
-                        <a class="{% if product_count %}font-weight-bold{% endif %} text-dark nav-link" href="{% url 'view_cart' %}">
+                        <a class="nav-link{% if product_count %} text-dark{% else %} text-lighter{% endif %}" href="{% url 'view_cart' %}">
                             <div class="text-center">
-                                <div>
-                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                <div class="position-relative">
+                                    <i class="fa fa-cart-shopping fa-xl"></i>
                                     <span class="sr-only">View cart</span>
                                     {% if product_count %}<span class="badge product-count-badge">{{ product_count }}</span>{% endif %}
                                 </div>

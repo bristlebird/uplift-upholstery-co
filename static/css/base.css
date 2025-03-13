@@ -3,39 +3,34 @@ html {
 }
 
 body {
+
+    /*  Colour custom properties */
     --timber-green: #112A26;
     --plantation: #264f48;
     --outer-space: #2c4440;
+    --granny-smith: #8aa39f;
     --deep-sea: #00866f;
     --casal: #2c6a60;
     --lynch: #61768a;
     --pale-sky: #6c757d; /* default bootsrap placeholder colour (text-secondary) */
     --sea-mist: #cee0ce;
-    /* --gray-nurse: #e5ede5; */
     --gray-nurse: #e7ece7;
     --chelsea-gem: #a56900;
-    /* --chelsea-gem: #96711b; */
-    --persian-blue: #2228C1;
+    --antique-bronze: #6b4605;
 
-
-    /* --dark: var(--timber-green); */
     --dark: var(--outer-space);
-    /* --off-white: #f5f7f6; */
+    --darker: var(--timber-green);
+    --dark-opaque: #2c444080;
     --off-white: #f3f6f4;
-    --text-light: var(--deep-sea);
     --text-light: var(--pale-sky);
-    /* --bg-lightgreen: var(--sea-mist); */
-    /* --bg-lightgreen: var(--gray-nurse); */
     --bg-lightgrey: var(--gray-nurse);
     --link-color: var(--chelsea-gem);
-    /* --link-color: var(--persian-blue); */
-    /* background: url('/media/phillip-goldsberry-fZuleEfeA1Q-unsplash.webp') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px); */
+    --link-hover-color: var(--timber-green);
+    --link-darker: var(--antique-bronze);
+
     color: #444;
     background-color: var(--off-white);
     font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
-    /* font-family: "Bitter", Georgia, 'Times New Roman', Times, serif; */
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -43,7 +38,6 @@ body {
         "wdth" 100,
         "YTLC" 500;
     font-size: 1.125rem;
-    /* font-size: 1rem; */
 }
 
 /* TYPOGRAPHY */
@@ -55,37 +49,32 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, .logo-font {
     color: var(--dark);
 }
 
+.text-lighter {
+    color: var(--granny-smith);
+}
+
 a {
     color: var(--link-color);
 }
 
+a:hover {
+    color: var(--link-hover-color);
+}
+
 .logo-font {
-    /* font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
-    font-optical-sizing: auto; */
     text-transform: uppercase;
     font-weight: 200;
 }
 
 .nav-font {
-    /* font-family: "Alegreya", Georgia, 'Times New Roman', Times, serif; */
     font-size: 1.25rem;
 }
 
-.main-logo-link {
-    /* width: fit-content; */
+#topnav .nav-link {
+    padding: .5rem;
+    margin: 0 .25rem;
 }
-.product-count-badge {
-    vertical-align: top;
-    margin: -.75rem 0 0 -.75rem;
-    border-radius: 50%;
-    width: 1.25rem;
-    height: 1.25rem;
-    background-color: var(--deep-sea);
-    color: #fff;
-}
-/* .badge-dark {
-    background-color: var(--dark);
-} */
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -122,7 +111,7 @@ a {
 .btn-outline-dark:hover,
 .btn-outline-dark:active,
 .btn-outline-dark:focus {
-    background: var(--dark);
+    background: var(--darker);
     color: white !important;
 }
 
@@ -132,7 +121,7 @@ a {
 .btn-dark:hover,
 .btn-dark:active,
 .btn-dark:focus {
-    background: var(--dark);
+    background: var(--darker);
     color: white;
 }
 
@@ -145,22 +134,12 @@ a {
 }
 
 .border-dark {
-    border: 1px solid var(--dark) !important;
+    border: 0.5px solid var(--dark-opaque) !important;
 }
 
 .bg-dark {
     background: var(--dark) !important;
 }
-
-/* .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-} */
 
 /* Category badge links on product listing page */
 a.category-badge > span.badge:hover {
@@ -183,9 +162,21 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/* Icon modifioer for add to cart button */
+/* Icon modifier for add to cart button */
 .add-to-cart-icon {
     vertical-align: -0.05em !important;
+}
+
+/* cart icon product count badge */
+.product-count-badge {
+    position: absolute;
+    top: -.75rem;
+    right: -.75rem;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--link-color);
+    color: #fff;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -271,7 +262,7 @@ a.category-badge > span.badge:hover {
 }
 
 .allauth-form-inner-content input {
-    border-color: var(--dark);
+    border: 0.5px solid var(--dark-opaque) !important;
     border-radius: 0;
 }
 
@@ -298,7 +289,7 @@ a.category-badge > span.badge:hover {
     -ms-user-select: none;
     user-select: none;
     background-color: var(--dark);
-    border: 1px solid var(--dark);
+    border: 0.5px solid var(--dark-opaque) !important;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -363,30 +354,9 @@ a.category-badge > span.badge:hover {
   }
 }
 
-/* fixed top navbar only on medium and up */
-/* @media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-} */
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    /* .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    } */
 
     .display-4.logo-font.text-dark {
         font-size: 2rem;
@@ -409,18 +379,8 @@ a.category-badge > span.badge:hover {
         font-size: .9rem;
     }
 
-    /* .btn.btn-outline-dark.rounded-0,
-    .btn.btn-dark.rounded-0 {
-        padding: .375rem .375rem;
-    } */
-
     .btn.btn-outline-dark.rounded-0.btn-lg,
     .btn.btn-dark.rounded-0.btn-lg {
-        /* padding: .375rem .375rem; */
         font-size: 1rem;
     }
-
-    /* .increment-qty, .decrement-qty {
-        padding: .25rem .5rem !important;
-    } */
 }

@@ -57,9 +57,9 @@
     </div>
 </li> -->
 <li class="list-inline-item mr-0 d-block d-lg-none">
-    <a class="nav-link{% if grand_total %} text-primary{% else %} text-dark{% endif %}" href="{% url 'view_cart' %}">
+    <a class="nav-link{% if product_count %} text-dark{% else %} text-lighter{% endif %}" href="{% url 'view_cart' %}">
         <div class="text-center">
-            <div>
+            <div class="position-relative">
                 <i class="fas fa-cart-shopping fa-xl"></i>
                 <span class="sr-only">View cart</span>
                 {% if product_count %}<span class="badge product-count-badge">{{ product_count }}</span>{% endif %}

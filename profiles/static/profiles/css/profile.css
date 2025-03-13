@@ -5,6 +5,8 @@
 
 #profile-update-form .form-control {
     color: var(--dark);
+    border: 0.5px solid var(--dark-opaque) !important;
+    border-radius: 0;
 }
 
 #profile-update-form input::placeholder {

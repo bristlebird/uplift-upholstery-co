@@ -33,7 +33,7 @@
 #payment-form .form-control,
 #card-element {
     color: var(--dark);
-    border: 1px solid var(--dark);
+    border: 0.5px solid var(--dark-opaque) !important;    
 }
 
 select, 
