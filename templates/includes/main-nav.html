@@ -1,11 +1,27 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav nav-font w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
-            <a class="nav-link text-dark mr-5" href="{% url 'home' %}" id="home-link">
-                Home
-            </a>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="{% url 'home' %}" id="home-link">Home</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="{% url 'products' %}?category=sofas">Sofas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="{% url 'products' %}?category=armchairs">Armchairs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="{% url 'products' %}?category=footstools">Foot Stools</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="{% url 'products' %}">All Products</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="#">Courses</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link text-dark mr-5"></a>
+        </li> -->
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
@@ -14,8 +30,8 @@
                 <a href="{% url 'products' %}?sort=category&order=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
-        </li>
-        <li class="nav-item dropdown">
+        </li> -->
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Furniture
             </a>
@@ -25,6 +41,6 @@
                 <a href="{% url 'products' %}?category=footstools" class="dropdown-item">Foot Stools</a>
                 <a href="{% url 'products' %}?category=sofas,armchairs,footstools" class="dropdown-item">All Furniture</a>
             </div>
-        </li>
+        </li> -->
     </ul>
 </div>

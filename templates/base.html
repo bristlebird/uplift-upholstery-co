@@ -10,7 +10,6 @@
     {% endblock %}
     <title>{% block extra_title %}{% endblock %}Uplift Upholstery Co.</title>
     {% block extra_meta %}{% endblock %}
-    {% block corecss %}
     <link rel="preconnect dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect dns-prefetch" href="https://stackpath.bootstrapcdn.com">
@@ -18,6 +17,8 @@
     <link rel="preconnect dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect dns-prefetch" href="https://js.stripe.com">
     <link rel="preconnect dns-prefetch" href="https://js.createsend1.com">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+    {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -36,13 +37,10 @@
   <body class="d-flex flex-column h-100">
     <header class="container-fluid">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font my-0 text-dark">Uplift Upholstery Co.</h2>
-                </a>
-            </div>
+
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
+                
+                <!-- <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-dark rounded-6" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
@@ -53,18 +51,26 @@
                             </button>
                         </div>
                     </div>
-                </form>
+                </form> -->
+            </div>
+            <div class="col-12 col-lg-4 my-auto pt-2 pb-0 text-center">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <img src="{% static 'uuc-logo-mark.svg' %}" alt="Uplift Upholstery logo mark" class="logo" width="50" height="58">
+                    <h2 class="logo-font mt-3 mb-0 text-dark">Uplift Upholstery Co.</h2>
+                </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <div>
+                                    <i class="fa-sharp fa-solid fa-circle-user fa-xl"></i>
+                                    <span class="sr-only">My Account</span>
+                                </div>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0 dropdown-menu-right shadow" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -78,14 +84,13 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if product_count %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_cart' %}">
+                        <a class="{% if product_count %}font-weight-bold{% endif %} text-dark nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-cart-shopping fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if product_count %}
-                                        <span class="cart-count badge">{{ product_count }}</span>
-                                    {% endif %}
-                                </p>
+                                <div>
+                                    <i class="fas fa-cart-shopping fa-xl"></i>
+                                    <span class="sr-only">View cart</span>
+                                    {% if product_count %}<span class="badge product-count-badge">{{ product_count }}</span>{% endif %}
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -94,9 +99,7 @@
         </div>
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
@@ -166,9 +169,9 @@
                     <span class="street-address">Main Street</span>, <span class="locality">Kinsale</span>, <span class="region">Co. Cork</span>, <span class="postal-code">P17 XK99</span>, <span class="country-name">Ireland</span></a><br>
                     <a href="tel:+3538888888888">+353 88 88888888</a> / <a href="mailto:info@upliftupholstery.co">info@upliftupholstery.co</a></p>
                 <div class="social-icons d-flex justify-content-around my-4 px-3">
-                    <a href="https://instagram.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Instagram" target="_blank"><span class="sr-only">Follow us on Instagram</span><i class="fab fa-instagram fa-xl ms-3" aria-hidden="true"></i></a>
-                    <a href="https://facebook.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Facebook" target="_blank"><span class="sr-only">Follow us on Facebook</span><i class="fab fa-facebook fa-xl ms-3" aria-hidden="true"></i></a>
-                    <a href="https://linkedin.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Linkedin" target="_blank"><span class="sr-only">Follow us on Linkedin</span><i class="fab fa-linkedin fa-xl ms-3" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Instagram" target="_blank"><span class="sr-only">Follow us on Instagram</span><i class="fab fa-instagram fa-xxl ms-3" aria-hidden="true"></i></a>
+                    <a href="https://facebook.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Facebook" target="_blank"><span class="sr-only">Follow us on Facebook</span><i class="fab fa-facebook fa-xxl ms-3" aria-hidden="true"></i></a>
+                    <a href="https://linkedin.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Linkedin" target="_blank"><span class="sr-only">Follow us on Linkedin</span><i class="fab fa-linkedin fa-xxl ms-3" aria-hidden="true"></i></a>
                     <a href="mailto:info@upliftupholstery.co" title="Email us"><span class="sr-only">Email us</span><i class="fa-solid fa-envelope fa-xl ms-3" aria-hidden="true"></i></a> 
                 </div>
             </div>

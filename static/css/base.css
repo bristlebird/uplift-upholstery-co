@@ -69,9 +69,20 @@ a {
 }
 
 .main-logo-link {
-    width: fit-content;
+    /* width: fit-content; */
 }
-
+.product-count-badge {
+    vertical-align: top;
+    margin: -.75rem 0 0 -.75rem;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--deep-sea);
+    color: #fff;
+}
+/* .badge-dark {
+    background-color: var(--dark);
+} */
 /* from Bulma */
 .icon {
     align-items: center;
@@ -81,8 +92,8 @@ a {
     width: 1.5rem;
 }
 /* increase & override large font awesome icon size */
-.fa-xl {
-    font-size: 2em !important;
+.fa-xxl {
+    font-size: 2em;
 }
 /* BUTTON MODIFIERS */
 .btn {

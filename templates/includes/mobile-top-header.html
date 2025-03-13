@@ -1,3 +1,6 @@
+<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
 <li class="list-inline-item">
     <a class="text-dark nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
@@ -23,11 +26,11 @@
 <li class="list-inline-item dropdown">
     <a class="text-dark nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
-            <div><i class="fas fa-user fa-lg"></i></div>
+            <div><i class="fa-sharp fa-solid fa-circle-user fa-lg"></i></div>
             <p class="my-0">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu dropdown-menu-right shadow border-0" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
