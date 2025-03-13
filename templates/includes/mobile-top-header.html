@@ -1,61 +1,13 @@
 {% load static %}
-    <!-- <a class="text-dark nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
-
 <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
-<!-- <li class="list-inline-item">
-    <a class="text-dark nav-link" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <div>
-                <i class="fas fa-search fa-xl"></i>
-                <span class="sr-only">Search</span>
-            </div>
-        </div>
-    </a>
-    <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-        <form class="form" method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                <div class="input-group-append">
-                    <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
-                        <span class="icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-</li> -->
 <li class="list-inline-item text-center d-block d-lg-none">
     <a href="{% url 'home' %}" class="nav-link main-logo-link">
         <img src="{% static 'uuc-logo-mark.svg' %}" alt="Uplift Upholstery logo mark" class="logo" width="36" height="42">
         <h2 class="logo-font small mt-1 mb-0 text-dark">Uplift <br>Upholstery Co.</h2>
     </a>
 </li>
-<!-- <li class="list-inline-item dropdown">
-    <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <div>
-                <i class="fa-solid fa-circle-user fa-xl"></i>
-                <span class="sr-only">My Account</span>
-            </div>
-        </div>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right shadow border-0" aria-labelledby="user-options">
-        {% if request.user.is_authenticated %}
-            {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-            {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-        {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-        {% endif %}
-    </div>
-</li> -->
 <li class="list-inline-item mr-0 d-block d-lg-none">
     <a class="nav-link{% if product_count %} text-dark{% else %} text-lighter{% endif %}" href="{% url 'view_cart' %}">
         <div class="text-center">

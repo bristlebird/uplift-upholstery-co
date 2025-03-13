@@ -34,7 +34,6 @@
                 <a href="{% url 'account_login' %}" class="nav-link text-dark mr-5" >Login</a>
             </li> 
         {% endif %}            
-        <!-- <li class="nav-item"> -->
         <li class="nav-item d-block d-lg-none">
             <div class="border-0 w-100 py-2 rounded-0 my-0" aria-labelledby="mobile-search">
                 <form class="form" method="GET" action="{% url 'products' %}">
@@ -51,30 +50,5 @@
                 </form>
             </div>
         </li>
-        
-        <!-- <li class="nav-item">
-            <a class="nav-link text-dark mr-5"></a>
-        </li> -->
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&order=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=category&order=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
-        </li> -->
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Furniture
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=sofas" class="dropdown-item">Sofas</a>
-                <a href="{% url 'products' %}?category=armchairs" class="dropdown-item">Armchairs</a>
-                <a href="{% url 'products' %}?category=footstools" class="dropdown-item">Foot Stools</a>
-                <a href="{% url 'products' %}?category=sofas,armchairs,footstools" class="dropdown-item">All Furniture</a>
-            </div>
-        </li> -->
     </ul>
 </div>

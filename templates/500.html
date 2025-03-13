@@ -1,0 +1,242 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Uplift Upholstery Co.</title>
+    <link rel="preconnect dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect dns-prefetch" href="https://stackpath.bootstrapcdn.com">
+    <link rel="preconnect dns-prefetch" href="https://kit.fontawesome.com">
+    <link rel="preconnect dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect dns-prefetch" href="https://js.stripe.com">
+    <link rel="preconnect dns-prefetch" href="https://js.createsend1.com">
+    <link rel="preconnect dns-prefetch" href="https://uplift-upholstery-co.s3.amazonaws.com">
+    <link rel="shortcut icon" type="image/png" href="https://uplift-upholstery-co.s3.amazonaws.com/static/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://uplift-upholstery-co.s3.amazonaws.com/static/css/base.css">
+    <script src="https://kit.fontawesome.com/21e2a13a45.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header class="container-fluid">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+            <div class="col-4 offset-4 my-auto pt-2 pb-0 text-center">
+                <a href="/" class="nav-link main-logo-link">
+                    <img src="https://uplift-upholstery-co.s3.amazonaws.com/static/uuc-logo-mark.svg" alt="Uplift Upholstery logo mark" class="logo" width="50" height="58">
+                    <h2 class="logo-font mt-3 mb-0 text-dark">Uplift Upholstery Co.</h2>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 mt-3 mb-auto py-1 py-lg-0">
+                <ul class="d-flex justify-content-end list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="w-75 mr-3">
+                        <form method="GET" action="/products/">
+                            <div class="input-group">
+                                <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button class="form-control btn btn-dark border border-dark rounded-0" type="submit">
+                                        <span class="icon">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    
+                    <li>
+                        <a class="text-lighter nav-link" href="/accounts/login/">
+                            <div class="text-center">
+                                <div>
+                                    <i class="fa-solid fa-user fa-xl"></i>
+                                    <span class="sr-only">Login</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="list-inline-item">
+                        <a class="nav-link text-lighter" href="/cart/">
+                            <div class="text-center">
+                                <div class="position-relative">
+                                    <i class="fa fa-cart-shopping fa-xl"></i>
+                                    <span class="sr-only">View cart</span>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">               
+
+<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<li class="list-inline-item text-center d-block d-lg-none">
+    <a href="/" class="nav-link main-logo-link">
+        <img src="https://uplift-upholstery-co.s3.amazonaws.com/static/uuc-logo-mark.svg" alt="Uplift Upholstery logo mark" class="logo" width="36" height="42">
+        <h2 class="logo-font small mt-1 mb-0 text-dark">Uplift <br>Upholstery Co.</h2>
+    </a>
+</li>
+<li class="list-inline-item mr-0 d-block d-lg-none">
+    <a class="nav-link text-lighter" href="/cart/">
+        <div class="text-center">
+            <div class="position-relative">
+                <i class="fas fa-cart-shopping fa-xl"></i>
+                <span class="sr-only">View cart</span>
+                
+            </div>
+        </div>
+    </a>
+</li>
+
+                <div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav nav-font w-auto mx-auto">
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="/products/?category=sofas">Sofas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="/products/?category=armchairs">Armchairs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="/products/?category=footstools">Foot Stools</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="/products/">All Products</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark mr-5" href="#">Courses</a>
+            <hr class="d-block d-lg-none">
+        </li>
+        
+        
+            <li class="nav-item d-block d-lg-none">
+                <a href="/accounts/login/" class="nav-link text-dark mr-5" >Login</a>
+            </li> 
+                    
+        <!-- <li class="nav-item"> -->
+        <li class="nav-item d-block d-lg-none">
+            <div class="border-0 w-100 py-2 rounded-0 my-0" aria-labelledby="mobile-search">
+                <form class="form" method="GET" action="/products/">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search our">
+                        <div class="input-group-append">
+                            <button class="form-control form-control btn btn-dark border border-dark rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-dark">
+                <p class="logo-font my-2 h5 text-white">Free delivery on orders over &euro;!</p>
+            </div>            
+        </div>
+    </header>
+
+    
+
+    
+    
+    <main class="pb-5">
+    
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 my-auto">
+                <h1 class="text-center my-5">Error 500 - Internal Server Error</h1>
+                <div class="text-center mb-5">
+                    <p>The server encountered an error and could not process your request.</p>
+                    <p>If the problem persists, please <a href="mailto:hostmaster@bristlebird.ie?subject=server%20error">report</a> 
+                        the problem and mention this error message and the query that caused it.</p>
+                    <a href="/products/" class="shop-now-button btn btn-dark btn-lg rounded-0 text-uppercase py-3">Return to shop</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <footer class="container-fluid site-footer mt-auto pt-5 pb-1">
+        <div class="row">
+            <div class="newsletter col-12 col-sm-5 offset-sm-1 col-lg-4 offset-lg-2 text-center my-3 px-4">
+                <h3 class="h4 logo-font my-1">Email Newsletter</h3>
+                <p>Subscribe to our newsletter to stay informed about latest news and special offers.</p>
+                <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post"
+                    data-id="5B5E7037DA78A748374AD499497E309E63FBC77DA4848B01B14F3EFE64FF9C1BAAD22B342FEF738BD7767C827697682CBF74D260271F9C334996A679E87113B9">
+                    <div class="form-group">
+                        <label for="fieldName" class="visuallyhidden sr-only">Your name</label>
+                        <input class="border-dark rounded-0 form-control" id="fieldName" maxlength="200" name="cm-name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group input-group w-100">
+                        <label for="fieldEmail" class="visuallyhidden sr-only">Email address</label>
+                        <input autocomplete="Email" class="js-cm-email-input qa-input-email border-dark rounded-0 form-control"
+                            id="fieldEmail" maxlength="200" name="cm-neuttu-neuttu" required type="email" placeholder="Email address">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-dark border border-dark rounded-0" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="form-group text-left">
+                        <input aria-required="" class="d-inline-block align-middle mr-2" id="cm-privacy-consent" name="cm-privacy-consent" required type="checkbox">
+                        <label for="cm-privacy-consent" class="d-inline"><span class="small">I agree to my personal data being stored and
+                            used to receive newsletters, information and commercial offers from Uplift Upholstery Co. by
+                            email.</span></label>
+                        <input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
+                    </div>
+                </form>
+            </div>
+            <div class="vcard col-12 col-sm-5 offset-sm-1 col-lg-4 offset-lg-0 text-center my-3 px-4" id="contact-details">
+                <img src="https://uplift-upholstery-co.s3.amazonaws.com/static/uuc-logo-mark.svg" alt="Uplift Upholstery logo mark" class="logo" width="36" height="42">
+                <h3 class="h4 logo-font mt-2 mb-1 fn org" rel="me">Uplift Upholstery Co.</h3>
+                <p>
+                    <span class="street-address">Main Street</span>, <span class="locality">Kinsale</span>, <span class="region">Co. Cork</span>, <span class="postal-code">P17 XK99</span>, <span class="country-name">Ireland</span></a><br>
+                    <a href="tel:+3538888888888">+353 88 88888888</a> / <a href="mailto:info@upliftupholstery.co">info@upliftupholstery.co</a></p>
+                <div class="social-icons d-flex justify-content-around my-4 px-3">
+                    <a href="https://instagram.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Instagram" target="_blank"><span class="sr-only">Follow us on Instagram</span><i class="fab fa-instagram fa-xxl ms-3" aria-hidden="true"></i></a>
+                    <a href="https://facebook.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Facebook" target="_blank"><span class="sr-only">Follow us on Facebook</span><i class="fab fa-facebook fa-xxl ms-3" aria-hidden="true"></i></a>
+                    <a href="https://linkedin.com/uplift-upholstery-co" rel="noopener noreferrer" title="Follow us on Linkedin" target="_blank"><span class="sr-only">Follow us on Linkedin</span><i class="fab fa-linkedin fa-xxl ms-3" aria-hidden="true"></i></a>
+                    <a href="mailto:info@upliftupholstery.co" title="Email us"><span class="sr-only">Email us</span><i class="fa-solid fa-envelope fa-xl ms-3" aria-hidden="true"></i></a> 
+                </div>
+            </div>
+        </div>
+        <nav class="site-footer__nav">
+            <hr>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Shipping &amp; Delivery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Privacy &amp; Cookies</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Terms &amp; Conditions</a></li>
+            </ul>
+        </nav>
+        <p class="site-footer__copyright my-4 text-center small">
+            &copy; Uplift Upholstery 2025. All rights reserved. <span class="d-block d-md-inline">Website by <a href="https://bristlebird.ie">Bristlebird</a>.</span>
+        </p>
+    </footer>
+
+    
+    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    
+    
+  </body>
+</html>
