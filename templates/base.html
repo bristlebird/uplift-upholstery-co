@@ -38,35 +38,67 @@
   <body class="d-flex flex-column h-100">
     <header class="container-fluid">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                
-                <!-- <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-dark rounded-6" type="text" name="q" placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-dark border border-dark rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form> -->
-            </div>
-            <div class="col-12 col-lg-4 my-auto pt-2 pb-0 text-center">
+            <!-- <div class="col-12 col-lg-4 mt-3 mb-auto py-1 py-lg-0">
+            </div> -->
+            <div class="col-4 offset-4 my-auto pt-2 pb-0 text-center">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <img src="{% static 'uuc-logo-mark.svg' %}" alt="Uplift Upholstery logo mark" class="logo" width="50" height="58">
                     <h2 class="logo-font mt-3 mb-0 text-dark">Uplift Upholstery Co.</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <div class="col-12 col-lg-4 mt-3 mb-auto py-1 py-lg-0">
+                <ul class="d-flex justify-content-end list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item w-75">
+                        <form method="GET" action="{% url 'products' %}">
+                            <div class="input-group">
+                                <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button class="form-control btn btn-dark border border-dark rounded-0" type="submit">
+                                        <span class="icon">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li class="list-inline-item">
+                        <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div>
+                                    <i class="fa-solid fa-user-check fa-xl"></i>
+                                    <span class="sr-only">Account</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0 dropdown-menu-right shadow" aria-labelledby="user-options">
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Manage Products</a>
+                            {% endif %}
+                            <a href="{% url 'profile' %}" class="dropdown-item">My Account</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        </div>
+                    </li> 
+                    {% else %}
+                    <li class="list-inline-item">
+                        <a class="text-dark nav-link" href="{% url 'account_login' %}">
+                            <div class="text-center">
+                                <div>
+                                    <i class="fa-solid fa-user fa-xl"></i>
+                                    <span class="sr-only">Login</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    {% endif %}
+                        
+                    <!--
                     <li class="list-inline-item dropdown">
                         <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div>
-                                    <i class="fa-sharp fa-solid fa-circle-user fa-xl"></i>
+                                    <i class="fa-solid fa-circle-user fa-xl"></i>
                                     <span class="sr-only">My Account</span>
                                 </div>
                             </div>
@@ -83,12 +115,13 @@
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
-                    </li>
+                    </li> 
+                    -->
                     <li class="list-inline-item">
                         <a class="{% if product_count %}font-weight-bold{% endif %} text-dark nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
                                 <div>
-                                    <i class="fas fa-cart-shopping fa-xl"></i>
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
                                     <span class="sr-only">View cart</span>
                                     {% if product_count %}<span class="badge product-count-badge">{{ product_count }}</span>{% endif %}
                                 </div>
@@ -99,8 +132,7 @@
             </div>
         </div>
         <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                
+            <nav class="navbar navbar-expand-lg navbar-light w-100">               
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
@@ -132,9 +164,10 @@
 
     {% block page_header %}
     {% endblock %}
-
+    <main class="pb-5">
     {% block content %}
     {% endblock %}
+    </main>
 
     <footer class="container-fluid site-footer mt-auto pt-5 pb-1">
         <div class="row">
@@ -165,7 +198,8 @@
                 </form>
             </div>
             <div class="vcard col-12 col-sm-5 offset-sm-1 col-lg-4 offset-lg-0 text-center my-3 px-4" id="contact-details">
-                <h3 class="h4 logo-font my-1 fn org" rel="me">Uplift Upholstery Co.</h3>
+                <img src="{% static 'uuc-logo-mark.svg' %}" alt="Uplift Upholstery logo mark" class="logo" width="36" height="42">
+                <h3 class="h4 logo-font mt-2 mb-1 fn org" rel="me">Uplift Upholstery Co.</h3>
                 <p>
                     <span class="street-address">Main Street</span>, <span class="locality">Kinsale</span>, <span class="region">Co. Cork</span>, <span class="postal-code">P17 XK99</span>, <span class="country-name">Ireland</span></a><br>
                     <a href="tel:+3538888888888">+353 88 88888888</a> / <a href="mailto:info@upliftupholstery.co">info@upliftupholstery.co</a></p>

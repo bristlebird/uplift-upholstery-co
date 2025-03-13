@@ -5,25 +5,28 @@ html {
 body {
     --timber-green: #112A26;
     --plantation: #264f48;
+    --outer-space: #2c4440;
     --deep-sea: #00866f;
     --casal: #2c6a60;
     --lynch: #61768a;
     --pale-sky: #6c757d; /* default bootsrap placeholder colour (text-secondary) */
     --sea-mist: #cee0ce;
-    --gray-nurse: #e5ede5;
+    /* --gray-nurse: #e5ede5; */
+    --gray-nurse: #e7ece7;
     --chelsea-gem: #a56900;
     /* --chelsea-gem: #96711b; */
     --persian-blue: #2228C1;
 
 
     /* --dark: var(--timber-green); */
-    --dark: var(--plantation);
+    --dark: var(--outer-space);
     /* --off-white: #f5f7f6; */
     --off-white: #f3f6f4;
     --text-light: var(--deep-sea);
     --text-light: var(--pale-sky);
     /* --bg-lightgreen: var(--sea-mist); */
-    --bg-lightgreen: var(--gray-nurse);
+    /* --bg-lightgreen: var(--gray-nurse); */
+    --bg-lightgrey: var(--gray-nurse);
     --link-color: var(--chelsea-gem);
     /* --link-color: var(--persian-blue); */
     /* background: url('/media/phillip-goldsberry-fZuleEfeA1Q-unsplash.webp') no-repeat center center fixed;
@@ -255,6 +258,13 @@ a.category-badge > span.badge:hover {
 
 /* Allauth form formatting */
 
+.allauth-form-inner-content {
+
+    text-align: center;
+    max-width: 24rem;
+    margin: 0 auto;
+
+}
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: var(--dark); /* text-secondary */
@@ -277,6 +287,8 @@ a.category-badge > span.badge:hover {
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
 	display: inline-block;
+    text-transform: uppercase;
+    width: 100%;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -303,9 +315,6 @@ a.category-badge > span.badge:hover {
     border-color: #222;
 }
 
-.allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
-}
 
 /* Product Form */
 
@@ -342,7 +351,7 @@ a.category-badge > span.badge:hover {
 
 /* Site footer */
 .site-footer {
-    background-color: var(--bg-lightgreen);
+    background-color: var(--bg-lightgrey);
 }
 
 /* -------------------------------- Media Queries */

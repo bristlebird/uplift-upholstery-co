@@ -1,9 +1,6 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav nav-font w-auto mx-auto">
         <li class="nav-item">
-            <a class="nav-link text-dark mr-5" href="{% url 'home' %}" id="home-link">Home</a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link text-dark mr-5" href="{% url 'products' %}?category=sofas">Sofas</a>
         </li>
         <li class="nav-item">
@@ -17,7 +14,44 @@
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark mr-5" href="#">Courses</a>
+            <hr class="d-block d-lg-none">
         </li>
+        
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <li class="nav-item d-block d-lg-none">
+                <a href="{% url 'add_product' %}" class="nav-link text-dark mr-5">Manage Products</a>
+            </li>
+            {% endif %}
+            <li class="nav-item d-block d-lg-none">
+                <a href="{% url 'profile' %}" class="nav-link text-dark mr-5">My Account</a>
+            </li>
+            <li class="nav-item d-block d-lg-none">
+                <a href="{% url 'account_logout' %}" class="nav-link text-dark mr-5" >Logout</a>
+            </li> 
+        {% else %}
+            <li class="nav-item d-block d-lg-none">
+                <a href="{% url 'account_login' %}" class="nav-link text-dark mr-5" >Login</a>
+            </li> 
+        {% endif %}            
+        <!-- <li class="nav-item"> -->
+        <li class="nav-item d-block d-lg-none">
+            <div class="border-0 w-100 py-2 rounded-0 my-0" aria-labelledby="mobile-search">
+                <form class="form" method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search our">
+                        <div class="input-group-append">
+                            <button class="form-control form-control btn btn-dark border border-dark rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+        
         <!-- <li class="nav-item">
             <a class="nav-link text-dark mr-5"></a>
         </li> -->
