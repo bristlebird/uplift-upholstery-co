@@ -18,7 +18,7 @@ def all_products(request):
     # only display published products to customers, superuser sees all.
     if request.user.is_superuser:
         products = Product.objects.all()
-    else: 
+    else:
         products = Product.objects.filter(status=1)
 
     query = None

@@ -34,11 +34,13 @@ def contact(request):
                     'message': message
                     }
                 )
-            EmailMessage(subject, body,
-                settings.DEFAULT_FROM_EMAIL,  # Send from
-                [settings.STORE_OWNER_EMAIL],  # Send to
-                [], reply_to=[email]  # reply to email
-            ).send()
+            EmailMessage(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.STORE_OWNER_EMAIL],
+                [], reply_to=[email]
+                ).send()
             messages.success(request, 'Message sent successfully')
             return redirect(reverse('contact_success'))
 
