@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h2 class="logo-font my-5">Thank you!</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-lg-3">
+                <p class="lead mb-5">Thanks for getting in touch! Your enquiry has been sent and we will endeavour to reply as soon as possible. </p>
+                <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

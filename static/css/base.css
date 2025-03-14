@@ -247,6 +247,14 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+
+/* Forms */
+.textinput, .emailinput, .numberinput, .textarea, .lazyselect, .btn {
+    border: 0.5px solid var(--dark-opaque) !important;
+    border-radius: 0;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content {
