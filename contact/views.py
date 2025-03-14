@@ -18,29 +18,27 @@ def contact(request):
         if form.is_valid():
             form.save()
             # send enquiry to store owner by email
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            phone_number = form.cleaned_data['phone_number']
+            message = form.cleaned_data['message']
             subject = render_to_string(
                 'contact/enquiry_emails/enquiry_subject.txt',
-                {'form': form})
+                {'name': name})
             body = render_to_string(
                 'contact/enquiry_emails/enquiry_body.txt',
-                {'form': form})
-
-            email = form.cleaned_data['email']
-            EmailMessage(
-                subject,
-                body,
+                {
+                    'name': name,
+                    'email': email,
+                    'phone_number': phone_number,
+                    'message': message
+                    }
+                )
+            EmailMessage(subject, body,
                 settings.DEFAULT_FROM_EMAIL,  # Send from
                 [settings.STORE_OWNER_EMAIL],  # Send to
-                [],
-                reply_to=[email]  # reply to email
+                [], reply_to=[email]  # reply to email
             ).send()
-
-            # send_mail(
-            #     subject,
-            #     body,
-            #     settings.DEFAULT_FROM_EMAIL,
-            #     [settings.DEFAULT_FROM_EMAIL]
-            # )
             messages.success(request, 'Message sent successfully')
             return redirect(reverse('contact_success'))
 

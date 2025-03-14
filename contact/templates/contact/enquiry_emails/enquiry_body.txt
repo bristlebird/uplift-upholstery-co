@@ -1,8 +1,8 @@
-The following enquiry was sent from the Uplift Upholstery website contact form on {{ form.created_on }}:
+The following enquiry was sent by {{ name }} from the Uplift Upholstery website contact form:
 
-Sender name: {{ form.name }}
-Sender email: {{ form.email }}
-Sender phone number: {{ form.phone_number }}
+Name: {{ name }}
+Email: {{ email }}
+Phone number: {{ phone_number }}
 
 Message:
-{{ form.message }}
+{{ message }}
