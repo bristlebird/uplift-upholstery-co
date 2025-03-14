@@ -2,11 +2,11 @@
 Views for the contact app
 """
 from django.shortcuts import render, redirect, reverse
-from django.contrib import messages
-
-# from .models import Enquiry
-from django.core.mail import send_mail
+# from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
+from django.contrib import messages
+from django.conf import settings
 from .forms import EnquiryForm
 
 
@@ -25,12 +25,22 @@ def contact(request):
                 'contact/enquiry_emails/enquiry_body.txt',
                 {'form': form})
 
-            send_mail(
+            email = form.cleaned_data['email']
+            EmailMessage(
                 subject,
                 body,
-                settings.DEFAULT_FROM_EMAIL,
-                [settings.DEFAULT_FROM_EMAIL]
-            )
+                settings.DEFAULT_FROM_EMAIL,  # Send from
+                [settings.STORE_OWNER_EMAIL],  # Send to
+                [],
+                reply_to=[email]  # reply to email
+            ).send()
+
+            # send_mail(
+            #     subject,
+            #     body,
+            #     settings.DEFAULT_FROM_EMAIL,
+            #     [settings.DEFAULT_FROM_EMAIL]
+            # )
             messages.success(request, 'Message sent successfully')
             return redirect(reverse('contact_success'))
 

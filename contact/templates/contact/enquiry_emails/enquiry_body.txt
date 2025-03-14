@@ -2,6 +2,7 @@ The following enquiry was sent from the Uplift Upholstery website contact form o
 
 Sender name: {{ form.name }}
 Sender email: {{ form.email }}
+Sender phone number: {{ form.phone_number }}
 
 Message:
 {{ form.message }}
