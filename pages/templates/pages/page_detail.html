@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}{% if page.page_title %}{{ page.page_title }}{% else %}{{ page.title }}{% endif %} | {% endblock %}
+{% block extra_meta %}
+    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{page.content | striptags | truncatechars:160}}{% endif %}">
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <div class="row">
             <div class="col">
                 <h2 class="logo-font my-5 text-center">{{ page.title }}</h2>
                 <hr>
+                {% if page.banner_image %}
+                    <img class="banner-image" src="{{ page.banner_image.url }}" alt="{{ page.banner_alt_text|default:"Banner photo" }}" width="320" height="180">
+                {% endif %}
             </div>
         </div>
         <div class="row">

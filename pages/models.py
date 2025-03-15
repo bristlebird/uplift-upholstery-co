@@ -13,6 +13,8 @@ class Page(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     content = models.TextField()
+    banner_image = models.ImageField(null=True, blank=True)
+    banner_alt_text = models.CharField(max_length=254, null=True, blank=True)
     page_title = models.CharField(max_length=64, null=True, blank=True)
     meta_description = models.CharField(max_length=254, null=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
