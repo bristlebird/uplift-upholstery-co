@@ -17,6 +17,7 @@ class Enquiry(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
+        verbose_name_plural = 'Enquiries'
 
     def __str__(self):
         return f"Message from {self.name} — {self.email}"
