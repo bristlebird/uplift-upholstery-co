@@ -7,13 +7,25 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-12 my-5 text-center">
-                <h1 class="display-4 logo-font">Custom Made <br>Furnishings &amp; Upholstery</h1>
-                <div class="my-5">
-                    <h2><a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Browse Our Collection</a></h2>
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="card bg-dark text-white rounded-0">
+                <img src="{{ MEDIA_URL }}brompton_wide.webp" class="card-img" alt="Newly upholstered sofa">
+                <div class="card-img-overlay text-center">
+                    <h1 class="hero-title text-white mt-0 mt-md-5 mb-5 mb-sm-3">Custom Made <br>Furnishings &amp; Upholstery</h1>
+                    <div class="my-md-3">
+                        <p class="card-text"><a href="{% url 'products' %}" class="shop-now-button btn btn-outline-dark btn-lg py-3">Browse Our Collection</a></p>
+                    </div>
                 </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-8 offset-lg-2 pt-5">
+                <p>Uplift Upholstery are focussed on the design and manufacture of the finest bespoke upholstered furniture. 
+                    We can supply and adapt pieces from our existing range or create something completely new to your own specification. 
+                    We pride ourselves on unparalleled quality and attention to detail whilst using the finest crafts people in the area.</p>
+                <p>Our workshop is located at Uplift Studios, right in the centre of Kinsale town on West Cork's Wild Atlantic Way.</p>
+                <p class="text-center mt-3"><a class="btn btn-outline-dark" href="/pages/about-us/">Read more about us here</a></p>
             </div>
         </div>
     </div>

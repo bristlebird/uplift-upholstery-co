@@ -16,6 +16,7 @@ body {
     --sea-mist: #cee0ce;
     --gray-nurse: #e7ece7;
     --chelsea-gem: #a56900;
+    --hibiscus: #b12755;
     --antique-bronze: #6b4605;
 
     --dark: var(--outer-space);
@@ -24,9 +25,9 @@ body {
     --off-white: #f3f6f4;
     --text-light: var(--pale-sky);
     --bg-lightgrey: var(--gray-nurse);
-    --link-color: var(--chelsea-gem);
+    --link-color: var(--hibiscus);
     --link-hover-color: var(--timber-green);
-    --link-darker: var(--antique-bronze);
+    /* --link-darker: var(--antique-bronze); */
 
     color: #444;
     background-color: var(--off-white);
@@ -64,6 +65,7 @@ a:hover {
 .logo-font {
     text-transform: uppercase;
     font-weight: 200;
+    white-space: nowrap;
 }
 
 .nav-font {
@@ -88,30 +90,24 @@ a:hover {
     font-size: 2em;
 }
 
-/* herringbone pattern from css-pattern.com/zig-zag-3d/ */
-.herringbone {
-    --s: 6px; /* control the size*/
-    /* --c1: #78c0a8; */
-    --c1: var(--dark);
-    /* --c2: #add8e6; */
-    --c2: var(--deep-sea);
-    
-    --g:from 45deg at 50% 35%,#0000 75%,;
-    --_s:var(--s) calc(2*var(--s));
-    background:
-      conic-gradient(var(--g)var(--c2) 0) 
-       calc(var(--s)/2) var(--s)/var(--_s),
-      conic-gradient(var(--g)var(--c1) 0) 
-       calc(var(--s)/2)        0/var(--_s),
-      conic-gradient(#0004 135deg,#0000 0 225deg,#0009 0)
-       0 0/var(--s) var(--s),
-      linear-gradient(var(--c1) 50%,var(--c2) 0) 
-       0 var(--s)/var(--_s);
-  }
+/* seigaha pattern from https://projects.verou.me/css3patterns/#seigaiha */
+.seigaha {
+    height: 28px;
+    background-image:
+radial-gradient(circle at 100% 150%, var(--dark) 24%, var(--granny-smith) 24%, var(--granny-smith) 28%, var(--dark) 28%, var(--dark) 36%, var(--granny-smith) 36%, var(--granny-smith) 40%, transparent 40%, transparent),
+radial-gradient(circle at 0    150%, var(--dark) 24%, var(--granny-smith) 24%, var(--granny-smith) 28%, var(--dark) 28%, var(--dark) 36%, var(--granny-smith) 36%, var(--granny-smith) 40%, transparent 40%, transparent),
+radial-gradient(circle at 50%  100%, var(--granny-smith) 10%, var(--dark) 10%, var(--dark) 23%, var(--granny-smith) 23%, var(--granny-smith) 30%, var(--dark) 30%, var(--dark) 43%, var(--granny-smith) 43%, var(--granny-smith) 50%, var(--dark) 50%, var(--dark) 63%, var(--granny-smith) 63%, var(--granny-smith) 71%, transparent 71%, transparent),
+radial-gradient(circle at 100% 50%, var(--granny-smith) 5%, var(--dark) 5%, var(--dark) 15%, var(--granny-smith) 15%, var(--granny-smith) 20%, var(--dark) 20%, var(--dark) 29%, var(--granny-smith) 29%, var(--granny-smith) 34%, var(--dark) 34%, var(--dark) 44%, var(--granny-smith) 44%, var(--granny-smith) 49%, transparent 49%, transparent),
+radial-gradient(circle at 0    50%, var(--granny-smith) 5%, var(--dark) 5%, var(--dark) 15%, var(--granny-smith) 15%, var(--granny-smith) 20%, var(--dark) 20%, var(--dark) 29%, var(--granny-smith) 29%, var(--granny-smith) 34%, var(--dark) 34%, var(--dark) 44%, var(--granny-smith) 44%, var(--granny-smith) 49%, transparent 49%, transparent);
+background-size: 50px 25px;
+
+}
 
 /* BUTTON MODIFIERS */
 .btn {
     text-transform: uppercase;
+    box-shadow: 0 .125rem .75rem rgba(0, 0, 0, .25) !important;
+    border-radius: 0;
 }
 .shop-now-button {
     background: var(--dark);
@@ -162,6 +158,17 @@ a:hover {
 .bg-dark {
     background: var(--dark) !important;
 }
+
+/* home page hero */
+.hero-title {
+    font-size: 1.5rem;
+}
+@media (min-width: 991px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }    
+}
+
 
 /* Category badge links on product listing page */
 a.category-badge > span.badge:hover {
@@ -383,8 +390,6 @@ a.category-badge > span.badge:hover {
     max-width: 80%;
   }
 }
-
-
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
 
