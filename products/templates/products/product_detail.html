@@ -14,11 +14,11 @@
             <div class="product__image my-5">
                 {% if product.image %}
                     <a href="{{ product.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <img class="card-img img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                     </a>
                     {% else %}
                     <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img class="card-img img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                 {% endif %}
             </div>
