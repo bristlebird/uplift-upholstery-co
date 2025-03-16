@@ -13,6 +13,7 @@ body {
     --casal: #2c6a60;
     --lynch: #61768a;
     --pale-sky: #6c757d; /* default bootsrap placeholder colour (text-secondary) */
+    --shuttle-gray: #555c63;
     --sea-mist: #cee0ce;
     --gray-nurse: #e7ece7;
     --chelsea-gem: #a56900;
@@ -24,6 +25,8 @@ body {
     --dark-opaque: #2c444080;
     --off-white: #f3f6f4;
     --text-light: var(--pale-sky);
+    /* accessible contrast ratio */
+    --text-muted: var(--shuttle-gray); 
     --bg-lightgrey: var(--gray-nurse);
     --link-color: var(--hibiscus);
     --link-hover-color: var(--timber-green);
@@ -45,18 +48,36 @@ body {
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, .logo-font {
     font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 200;
     font-style: normal;
-    color: var(--dark);
+    color: var(--darker);
 }
 
 .text-lighter {
     color: var(--granny-smith);
 }
+/* better / WCAG accessible contrast ratio than bootstrap defaults */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+.text-danger {
+    color: #d8061a !important;
+}
 
 a {
     color: var(--link-color);
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+    /* text-decoration-style: dashed; */
+    text-underline-offset: 3px;
+    /* text-decoration-color: var(--text-lighter); */
 }
+
+/* a:not(.nav-link, .btn) { */
+a.nav-link, a.btn {
+    /* text-decoration: underline; */
+    text-decoration: none;
+}    
 
 a:hover {
     color: var(--link-hover-color);
@@ -108,6 +129,7 @@ background-size: 50px 25px;
     text-transform: uppercase;
     box-shadow: 0 .125rem .75rem rgba(0, 0, 0, .25) !important;
     border-radius: 0;
+    /* text-decoration: none; */
 }
 .shop-now-button {
     background: var(--dark);
@@ -122,7 +144,8 @@ background-size: 50px 25px;
 
 .btn-outline-dark {
     background: white;
-    color: var(--dark) !important; /* use important to override link colors for <a> elements */
+    /* use important to override link colors for <a> elements */
+    color: var(--link-color) !important; 
     border: 1px solid var(--dark);
 }
 

@@ -2,13 +2,13 @@
 <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
-<li class="list-inline-item text-center d-block d-lg-none">
+<div class="list-inline-item text-center d-block d-lg-none">
     <a href="{% url 'home' %}" class="nav-link main-logo-link">
         <img src="{% static 'uuc-logo-mark.svg' %}" alt="Uplift Upholstery logo mark" class="logo" width="36" height="42">
         <h2 class="logo-font small mt-1 mb-0 text-dark">Uplift <br>Upholstery Co.</h2>
     </a>
-</li>
-<li class="list-inline-item mr-0 d-block d-lg-none">
+</div>
+<div class="list-inline-item mr-0 d-block d-lg-none">
     <a class="nav-link{% if product_count %} text-dark{% else %} text-lighter{% endif %}" href="{% url 'view_cart' %}">
         <div class="text-center">
             <div class="position-relative">
@@ -18,4 +18,4 @@
             </div>
         </div>
     </a>
-</li>
+</div>

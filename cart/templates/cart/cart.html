@@ -3,13 +3,11 @@
 {% load humanize %}
 {% load cart_tools %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+{% block extra_title %}Shopping cart | {% endblock %}
+{% block extra_meta %}
+    <meta name="description" content="Shopping cart for the Uplift Upholstery online store.">
 {% endblock %}
+
 
 {% block content %}
     <div class="container mb-2">
@@ -56,8 +54,9 @@
 
 
                     <div class="btt-button shadow-sm rounded-0 border border-black">
-                        <a class="btt-link d-flex h-100">
+                        <a class="btt-link d-flex h-100" href="#">
                             <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
+                            <span class="sr-only">Back to top</span>
                         </a>	
                     </div>
                 </div>
