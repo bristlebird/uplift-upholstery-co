@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extra_title %}Success! Message sent to {% endblock %}
+{% block extra_meta %}
+    <meta name="description" content="Thanks for getting in touch.">
+{% endblock %}
+
 
 {% block content %}
     <div class="container text-center">

@@ -21,10 +21,6 @@
   background-color: #fefde5 !important;
 }
 
-.stripe-style-input::placeholder {
-    color: #aab7c4;
-}
-
 .fieldset-label {
     position: relative;
     right: .5rem;
@@ -42,8 +38,11 @@ select option {
 }
 
 select:invalid,
-select option[value=""] {
-    color: #aab7c4 !important;
+select option[value=""],
+.stripe-style-input::placeholder {
+    /* color: #aab7c4 !important; */
+    color: var(--text-muted) !important;
+    font-style: italic;
 }
 
 
