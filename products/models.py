@@ -40,7 +40,8 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     page_title = models.CharField(max_length=64, null=True, blank=True)
     meta_description = models.CharField(max_length=254, null=True, blank=True)
-    type = models.CharField(max_length=64, choices=PRODUCT_TYPES, default="Furniture")
+    type = models.CharField(
+        max_length=64, choices=PRODUCT_TYPES, default="Furniture")
     track_quantity = models.BooleanField(default=0)
     quantity_available = models.IntegerField(
         default=0, validators=[MinValueValidator(0)])

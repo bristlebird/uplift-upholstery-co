@@ -23,12 +23,13 @@ def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     if item_id in list(cart.keys()):
-        if product.track_quantity and quantity > (product.quantity_available - cart[item_id]):
+        if (product.track_quantity
+                and quantity > (product.quantity_available - cart[item_id])):
             messages.error(
                 request, f'Not enough of this item available. Please choose \
                     {(product.quantity_available - cart[item_id])} or less.'
             )
-            return redirect(redirect_url)            
+            return redirect(redirect_url)
 
         cart[item_id] += quantity
         messages.success(
