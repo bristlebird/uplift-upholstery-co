@@ -35,7 +35,6 @@ body {
     color: #333;
     background-color: var(--off-white);
     font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-variation-settings:
@@ -47,7 +46,6 @@ body {
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, .logo-font {
     font-family: "Rokkitt", Georgia, 'Times New Roman', Times, serif;
-    font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
     color: var(--darker);

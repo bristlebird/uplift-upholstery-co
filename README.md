@@ -171,7 +171,7 @@ On desktop, the site was also found to work pretty consistently in Google Chrome
 
 ### Validator Testing 
 
-- HTML — No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fresonance-podcaster-fe27f8eb1c9a.herokuapp.com%2F), except on the form pages that contain Summernote rich text editor (3rd party code over which I have no control of the output). Perhaps a more accessible rich text editor could have been used.
+- HTML — No errors returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fuplift-upholstery-1735a035f709.herokuapp.com), except on the form pages that contain Summernote rich text editor (3rd party code over which I have no control of the output).
 - CSS — No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fresonance-podcaster-fe27f8eb1c9a.herokuapp.com%2Fstatic%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) 
 
 ### Web Performance & Accessibility
