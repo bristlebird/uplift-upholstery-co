@@ -30,7 +30,6 @@ body {
     --bg-lightgrey: var(--gray-nurse);
     --link-color: var(--hibiscus);
     --link-hover-color: var(--timber-green);
-    /* --link-darker: var(--antique-bronze); */
 
     color: #333;
     background-color: var(--off-white);
@@ -123,7 +122,6 @@ background-size: 50px 25px;
     text-transform: uppercase;
     box-shadow: 0 .125rem .75rem rgba(0, 0, 0, .25) !important;
     border-radius: 0;
-    /* text-decoration: none; */
 }
 .shop-now-button {
     background: var(--dark);
